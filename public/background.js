@@ -11,7 +11,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
 
     if (cssLocation !== null) {
-      chrome.tabs.executeScript(tabId, {
+      chrome.tabs.insertCSS(tabId, {
         file: cssLocation,
         runAt: "document_end"
       });
